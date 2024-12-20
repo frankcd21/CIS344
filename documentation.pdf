@@ -1,0 +1,120 @@
+Changes Made to the Header:
+Moved the Header to the Middle:
+Initially, the header (<header>) was left-aligned. I modified the CSS to center the header content, which includes the logo and the driving school name.
+In style.css, I added the following styles:
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+This ensures the logo and title are placed in the center of the page, improving the design by providing a balanced visual experience.
+Logo Size Adjustments:
+The logo image was originally set to height="70" and width="70". I decided to slightly increase the size to give the logo more prominence:
+<img src="logo.jpeg" alt="Driving School logo" height="90" width="90" />
+This small change helps the logo become more noticeable and better represents the brand.
+Title Color Change:
+To make the title of the driving school stand out more, I changed the color of the <h1> element by modifying the style:
+h1 {
+    color: #007BFF; /* Changed from black to a bold blue */
+    font-size: 28pt; /* Increased size slightly */
+}
+The blue color is bright, friendly, and aligns with a professional driving school's theme.
+Changes in Color Scheme:
+Updated Menu Item Colors:
+The previous menuitem design used a plain black or gray color for the text. I updated the menu links to have a more vibrant hover effect:
+.menuitem a:hover {
+    background-color: #f1f1f1;
+    color: #007BFF; /* Added hover color change */
+}
+This interactive feedback improves the user experience and makes the navigation more modern.
+Card Backgrounds and Buttons:
+I enhanced the card visuals by adding a light blue color to make them stand out:
+.card {
+    background-color: #e6f7ff; /* Light blue */
+    border: 2px solid #007BFF;
+}
+The buttons were also updated to have a hover effect with a slightly darker green color:
+.card a:hover {
+    background-color: #218838;
+}
+These changes make the content more visually engaging and consistent with the site's theme.
+Adding Cards and Pricing Information
+One of the key features I introduced was the lesson plans displayed as cards in both home.html and bookings.html. Each card contains a title, price, and description of the driving lesson plans. Here’s how I implemented these cards:
+HTML Structure: I created a card layout using a combination of div elements for styling and organization. Each card is wrapped in a div with the class card.
+Content: Inside each card, I included relevant information such as the plan name, price, and a brief description. This allows users to quickly understand what each plan offers.
+<div class="card">
+    <h3>Basic Plan</h3>
+    <p class="price">$250</p>
+    <p class="description">5 lessons with a certified instructor. Perfect for beginners to learn the fundamentals.</p>
+    <a href="#">Sign Up</a>
+</div>
+CSS Styling: The cards were styled using CSS to ensure they have a consistent look. This includes background colors, borders, and hover effects to enhance user interaction.
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745; /* Green button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14pt;
+    display: inline-block;
+}
+
+.card a:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+Adding FAQs Section
+To provide additional support and information to users, I added a Frequently Asked Questions (FAQ) section in faq.html. This section helps address common queries and offers guidance about the driving school’s services.
+HTML Structure: Each FAQ is presented as a div with the class faq-item. This structure ensures that each question and answer is visually distinct and easy to read.
+Content: The FAQs cover various topics such as age requirements, payment methods, and lesson cancellation policies, providing users with essential information at a glance.
+Example FAQ Code:
+<div class="faq-item">
+    <h3>1. What age do I need to be to start driving lessons?</h3>
+    <p>Students can start taking driving lessons at the age of 16.</p>
+</div>
+Styling: The FAQ items are styled to have a light background and rounded borders, which enhances readability and makes the information easily accessible.
+CSS Example for FAQs:
+.faq-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.faq-item h3 {
+    font-size: 16pt;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 14pt;
+    color: #555;
+    margin: 5px 0 0 0;
+}
+
+Challenges Encountered:
+Centering the Header:
+Initially, I had issues with centering the entire header due to the combination of the image and text being treated separately. I resolved this by applying text-align: center to the <header> tag, ensuring both the logo and the school name were centered together. It took a bit of trial and error to figure out the proper solution.
+Cross-Browser Compatibility:
+One challenge I faced was ensuring the changes looked consistent across different browsers (Chrome, Firefox, and Edge). The CSS rendering was slightly off in Firefox, especially the buttons' hover effects. I had to adjust margins and padding slightly to fix this:
+.card a {
+    margin: 0 auto;
+    display: inline-block;
+}
+This ensured proper alignment and uniform behavior on all major browsers.
+CSS File Conflicts:
+Another issue was conflicting CSS between the main style.css file and inline styles in bookings.html. I resolved this by consolidating styles and removing redundant inline styling to ensure everything was controlled through the central stylesheet. This improved maintainability and reduced the potential for styling conflicts.
+
+
+Final Remarks:
+The changes made provide a cleaner, more visually appealing design while improving the user experience through interactive elements. These adjustments, especially in the header and color scheme, help create a more professional and modern website for DAN Driving School. . The addition of lesson cards and an FAQ section not only enhances user engagement but also provides valuable information to prospective students.  Challenges around cross-browser consistency and layout adjustments were resolved, ensuring the site performs well across different devices and browsers.
